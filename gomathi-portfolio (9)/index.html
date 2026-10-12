@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gomathi S — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+  <div class="loader-bg"></div>
+  <div class="loader-content">
+    <div class="loader-logo">
+      <span class="logo-letter">G</span><span class="logo-letter">S</span>
+    </div>
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill" id="loaderBar"></div>
+    </div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- CURSOR GLOW -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- AURORA BACKGROUND -->
+<div class="aurora-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo" data-target="home">GS<span class="dot">.</span></div>
+  <div class="nav-links">
+    <a href="#home" class="nav-link active" data-target="home">Home</a>
+    <a href="#about" class="nav-link" data-target="about">About</a>
+    <a href="#skills" class="nav-link" data-target="skills">Skills</a>
+    <a href="#projects" class="nav-link" data-target="projects">Projects</a>
+    <a href="#articles" class="nav-link" data-target="articles">Articles</a>
+    <a href="#coding" class="nav-link" data-target="coding">Coding</a>
+    <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+  </div>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO SECTION -->
+<section class="section hero" id="home" data-section="home">
+  <div class="hero-inner">
+    <div class="hero-left" data-animate="fade-right">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">Gomathi <span class="grad-text">S</span></h1>
+      <h2 class="hero-role">
+        <span class="role-text" id="roleText">Full Stack Developer</span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-sub">Computer Science Engineering Student · 3rd Year<br>National Engineering College</p>
+      <p class="hero-desc">Aspiring Full Stack Developer • AI Enthusiast • Problem Solver — building intelligent, elegant digital experiences from idea to deployment.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary magnetic" data-target="projects"><span>View Projects</span></a>
+        <a href="resume.pdf" class="btn btn-glass magnetic" download><span>Download Resume</span></a>
+        <a href="#contact" class="btn btn-outline magnetic" data-target="contact"><span>Contact Me</span></a>
+      </div>
+    </div>
+    <div class="hero-right" data-animate="fade-left">
+      <div class="orbit-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="orbit-dot dot-1"></div>
+        <div class="orbit-dot dot-2"></div>
+        <div class="orbit-dot dot-3"></div>
+        <div class="profile-frame">
+          <div class="profile-glow"></div>
+          <div class="profile-img"><img src="profile.jpg" alt="Gomathi S" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"><div class="scroll-dot"></div></div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="section about" id="about" data-section="about">
+  <div class="section-head" data-animate="fade-up">
+    <p class="section-tag">01 — About Me</p>
+    <h2 class="section-title">Who I Am</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text" data-animate="fade-up">
+      <p>I'm <strong>Gomathi S</strong>, a motivated Computer Science Engineering student at <strong>National Engineering College, Kovilpatti</strong>, specializing in <span class="highlight">Artificial Intelligence and Machine Learning</span>. I have a strong foundation in programming, data structures, and problem-solving.</p>
+      <p>I'm passionate about building intelligent systems that solve real-world problems using machine learning, data analysis, and automation — and I'm eager to continuously learn emerging technologies in AI and software development.</p>
+      <div class="about-tags">
+        <span class="tag">Artificial Intelligence</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Problem Solving</span>
+      </div>
+    </div>
+    <div class="about-stats" data-animate="fade-up">
+      <div class="stat-card glass">
+        <div class="stat-number" data-count="12">0</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-number" data-count="8">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-number" data-count="20">0</div>
+        <div class="stat-label">Technologies Learned</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-number" data-count="150">0</div>
+        <div class="stat-label">Coding Challenges Solved</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline" data-animate="fade-up">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content glass">
+        <span class="timeline-year">School</span>
+        <h3>Kanchi Sri Sankara Academy</h3>
+        <p>Completed Higher Secondary education in Tiruchendur with 89.83%, building a strong foundation in mathematics and science.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content glass">
+        <span class="timeline-year">College</span>
+        <h3>National Engineering College, Kovilpatti</h3>
+        <p>Pursuing B.E. Computer Science Engineering (2nd Year) with a CGPA of 8.29 — specializing in AI & Machine Learning.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content glass">
+        <span class="timeline-year">Now</span>
+        <h3>Current Learning Journey</h3>
+        <p>Exploring machine learning, data analytics, cloud computing, and IoT through NPTEL certifications and hands-on projects.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-extra-grid" data-animate="fade-up">
+    <div class="extra-card glass">
+      <h3>🏆 Achievements</h3>
+      <ul class="extra-list">
+        <li><strong>2 Prizes</strong> — Mystery Dataset Challenge, 7-Hour Hackathon</li>
+        <li><strong>Semi-Finalist</strong> — "Project to Product" Competition, Rural India Engineering Drive (RIDE), organized by TNECFWA in association with RuTAG–IIT Madras</li>
+        <li><strong>3-Star Completion</strong> — Graph Theory Programming Camp by AlgoUniversity, mentored by Codeforces Master Manas Kumar Verma (17 advanced graph problems solved)</li>
+      </ul>
+    </div>
+    <div class="extra-card glass">
+      <h3>📜 Certifications</h3>
+      <ul class="extra-list">
+        <li>11 certificates earned — NPTEL, Infosys Springboard, Snowflake, IEEE, AlgoUniversity & more</li>
+      </ul>
+      <a href="#coding" class="link-btn link-btn-primary" data-target="coding" style="margin-top:0.8rem; display:block;">View All Certificates ↓</a>
+    </div>
+    <div class="extra-card glass">
+      <h3>💻 SkillRack</h3>
+      <div class="coding-stats">
+        <div class="coding-stat"><span class="coding-number" data-count="1816">0</span><span class="coding-label">Programs Solved</span></div>
+        <div class="coding-stat"><span class="coding-number" data-count="851">0</span><span class="coding-label">Bronze Medals</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="section skills" id="skills" data-section="skills">
+  <div class="section-head" data-animate="fade-up">
+    <p class="section-tag">02 — Skills</p>
+    <h2 class="section-title">What I Work With</h2>
+  </div>
+
+  <div class="skills-grid" data-animate="fade-up">
+    <div class="skill-category">
+      <div class="skill-flip-inner">
+        <div class="skill-flip-front">
+          <h3>Programming Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>C</span><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+            <div class="skill-bar"><span>Java</span><div class="bar-track"><div class="bar-fill" data-width="75"></div></div></div>
+            <div class="skill-bar"><span>Python</span><div class="bar-track"><div class="bar-fill" data-width="85"></div></div></div>
+            <div class="skill-bar"><span>JavaScript</span><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+            <div class="skill-bar"><span>SQL</span><div class="bar-track"><div class="bar-fill" data-width="78"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-flip-back">
+          <h3>Languages I Speak in Code</h3>
+          <div class="skill-pill-grid">
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">SQL</span>
+          </div>
+          <p style="color:var(--muted);font-size:0.82rem;margin-top:0.5rem;">Hover away to flip back ↩</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-flip-inner">
+        <div class="skill-flip-front">
+          <h3>Frontend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>HTML</span><div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
+            <div class="skill-bar"><span>CSS</span><div class="bar-track"><div class="bar-fill" data-width="85"></div></div></div>
+            <div class="skill-bar"><span>JavaScript</span><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-flip-back">
+          <h3>Building What You See</h3>
+          <div class="skill-pill-grid">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-flip-inner">
+        <div class="skill-flip-front">
+          <h3>Backend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>Node.js</span><div class="bar-track"><div class="bar-fill" data-width="72"></div></div></div>
+            <div class="skill-bar"><span>Express.js</span><div class="bar-track"><div class="bar-fill" data-width="70"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-flip-back">
+          <h3>Powering the Server Side</h3>
+          <div class="skill-pill-grid">
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express.js</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-flip-inner">
+        <div class="skill-flip-front">
+          <h3>Database</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>MySQL</span><div class="bar-track"><div class="bar-fill" data-width="78"></div></div></div>
+            <div class="skill-bar"><span>PostgreSQL</span><div class="bar-track"><div class="bar-fill" data-width="70"></div></div></div>
+            <div class="skill-bar"><span>Snowflake</span><div class="bar-track"><div class="bar-fill" data-width="65"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-flip-back">
+          <h3>Where Data Lives</h3>
+          <div class="skill-pill-grid">
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Snowflake</span>
+            <span class="skill-pill">SQL Queries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category skill-tools">
+      <div class="skill-flip-inner">
+        <div class="skill-flip-front">
+          <h3>Tools</h3>
+          <div class="tool-circles">
+            <div class="tool-circle">
+              <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle-fill" data-percent="85" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
+              <span>Git</span>
+            </div>
+            <div class="tool-circle">
+              <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle-fill" data-percent="85" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
+              <span>GitHub</span>
+            </div>
+            <div class="tool-circle">
+              <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle-fill" data-percent="60" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
+              <span>Power BI</span>
+            </div>
+            <div class="tool-circle">
+              <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle-fill" data-percent="55" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
+              <span>AWS</span>
+            </div>
+            <div class="tool-circle">
+              <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle-fill" data-percent="50" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-flip-back">
+          <h3>Tools of the Trade</h3>
+          <div class="skill-pill-grid">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="section projects" id="projects" data-section="projects">
+  <div class="section-head" data-animate="fade-up">
+    <p class="section-tag">03 — Projects</p>
+    <h2 class="section-title">Featured Work</h2>
+  </div>
+
+  <div class="projects-grid" data-animate="fade-up">
+    <a href="projects/smart-home.html" class="project-card glass tilt project-card-link">
+      <div class="project-image"><div class="project-glyph">🏠</div></div>
+      <div class="project-body">
+        <h3>Smart Home Management System</h3>
+        <p>A C++ simulation of a smart home applying core OOP concepts — encapsulation, hierarchical inheritance, polymorphism, abstraction, templates, exception handling, and file persistence — for SmartLight and SmartThermostat devices.</p>
+        <div class="tech-tags">
+          <span>C++</span><span>OOP</span><span>File Handling</span><span>Templates</span>
+        </div>
+        <div class="project-links">
+          <span class="link-btn link-btn-primary full-link">View Project →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="projects/crime-management.html" class="project-card glass tilt project-card-link">
+      <div class="project-image"><div class="project-glyph">🚔</div></div>
+      <div class="project-body">
+        <h3>Crime Management System</h3>
+        <p>A Java-based system to record, track, and manage crime reports, case statuses, and officer assignments with a structured database backend.</p>
+        <div class="tech-tags">
+          <span>Java</span><span>OOP</span><span>Database</span>
+        </div>
+        <div class="project-links">
+          <span class="link-btn link-btn-primary full-link">View Project →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="projects/spotify-trends.html" class="project-card glass tilt project-card-link">
+      <div class="project-image"><div class="project-glyph">📊</div></div>
+      <div class="project-body">
+        <h3>Spotify Trends Dashboard (Snowflake)</h3>
+        <p>A Snowflake-based analytics project modeling Spotify track performance — streams, viral score, popularity category, and longevity — queried and visualized as part of a one-credit Data Analytics course.</p>
+        <div class="tech-tags">
+          <span>Snowflake</span><span>SQL</span><span>Data Analytics</span>
+        </div>
+        <div class="project-links">
+          <span class="link-btn link-btn-primary full-link">View Project →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="projects/prodigy.html" class="project-card glass tilt project-card-link">
+      <div class="project-image"><div class="project-glyph">🌐</div></div>
+      <div class="project-body">
+        <h3>Prodigy</h3>
+        <p>A web project built with HTML, exploring frontend fundamentals and UI structuring as part of hands-on practice.</p>
+        <div class="tech-tags">
+          <span>HTML</span><span>CSS</span><span>Frontend</span>
+        </div>
+        <div class="project-links">
+          <span class="link-btn link-btn-primary full-link">View Project →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="projects/agentic-ai.html" class="project-card glass tilt project-card-link">
+      <div class="project-image"><div class="project-glyph">🤖</div></div>
+      <div class="project-body">
+        <h3>Agentic AI & Frameworks (Course Project)</h3>
+        <p>A one-credit course exploring agentic AI concepts — learning how to use AI tools and frameworks to build and manage autonomous agent workflows.</p>
+        <div class="tech-tags">
+          <span>AI Agents</span><span>Frameworks</span><span>AI Tools</span>
+        </div>
+        <div class="project-links">
+          <span class="link-btn link-btn-primary full-link">View Project →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<!-- ARTICLES SECTION -->
+<section class="section articles" id="articles" data-section="articles">
+  <div class="section-head" data-animate="fade-up">
+    <p class="section-tag">04 — Articles</p>
+    <h2 class="section-title">Writing & Insights</h2>
+  </div>
+
+  <div class="articles-grid" data-animate="fade-up">
+    <article class="article-card glass">
+      <div class="article-image"><div class="article-glyph">🧠</div></div>
+      <div class="article-body">
+        <span class="article-date">June 2026</span>
+        <h3>Getting Started with Machine Learning for Disaster Prediction</h3>
+        <p>A walkthrough of the foundations behind building predictive models for real-world risk analysis.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="article-card glass">
+      <div class="article-image"><div class="article-glyph">⚙️</div></div>
+      <div class="article-body">
+        <span class="article-date">May 2026</span>
+        <h3>Building Full Stack Apps with AI Integration</h3>
+        <p>Exploring how to weave AI capabilities into traditional full-stack web applications.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="article-card glass">
+      <div class="article-image"><div class="article-glyph">📈</div></div>
+      <div class="article-body">
+        <span class="article-date">April 2026</span>
+        <h3>From Raw Data to Dashboards: A Power BI Journey</h3>
+        <p>Lessons learned turning messy datasets into clean, insightful visual dashboards.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CODING PROFILES SECTION -->
+<section class="section coding" id="coding" data-section="coding">
+  <div class="section-head" data-animate="fade-up">
+    <p class="section-tag">05 — Coding Profiles</p>
+    <h2 class="section-title">Where I Practice</h2>
+  </div>
+
+  <div class="coding-grid" data-animate="fade-up">
+    <div class="coding-card glass">
+      <h3>GitHub</h3>
+      <div class="coding-stats">
+        <div class="coding-stat"><span class="coding-number" data-count="3">0</span><span class="coding-label">Repositories</span></div>
+        <div class="coding-stat"><span class="coding-number" data-count="180">0</span><span class="coding-label">Contributions</span></div>
+        <div class="coding-stat"><span class="coding-number" data-count="40">0</span><span class="coding-label">Followers</span></div>
+      </div>
+      <a href="https://github.com/swathi-git1" target="_blank" class="link-btn link-btn-primary" style="margin-top:1.2rem; display:block;">Visit Profile</a>
+    </div>
+
+    <div class="coding-card glass">
+      <h3>LeetCode</h3>
+      <div class="coding-stats">
+        <div class="coding-stat"><span class="coding-number" data-count="150">0</span><span class="coding-label">Problems Solved</span></div>
+        <div class="coding-stat"><span class="coding-number" data-count="850000">0</span><span class="coding-label">Global Ranking</span></div>
+      </div>
+    </div>
+
+    <div class="coding-card glass">
+      <h3>HackerRank</h3>
+      <div class="coding-stats">
+        <div class="coding-stat"><span class="coding-number" data-count="6">0</span><span class="coding-label">Certifications</span></div>
+        <div class="coding-stat"><span class="coding-number" data-count="14">0</span><span class="coding-label">Badges</span></div>
+      </div>
+    </div>
+
+    <div class="coding-card glass">
+      <h3>CodeChef</h3>
+      <div class="coding-stats">
+        <div class="coding-stat"><span class="coding-number" data-count="1450">0</span><span class="coding-label">Rating</span></div>
+        <div class="coding-stat"><span class="coding-number" data-count="3">0</span><span class="coding-label">Star Rank</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-gallery-head" data-animate="fade-up">
+    <h3>📜 Certifications</h3>
+    <p>11 certificates across cloud, programming, web development, and competitive learning — click any to view full size.</p>
+  </div>
+
+  <div class="cert-gallery" data-animate="fade-up">
+    <div class="cert-thumb" data-full="certs/cert-snowpro.jpg" data-title="SnowPro Associate: Platform — Snowflake (Issued Mar 2026)">
+      <img src="certs/cert-snowpro.jpg" alt="SnowPro Associate Platform Certificate" loading="lazy">
+      <div class="cert-thumb-label">SnowPro Associate: Platform</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-graphtheory.jpg" data-title="Graph Theory Programming Camp — AlgoUniversity (3-Star, 17 problems solved)">
+      <img src="certs/cert-graphtheory.jpg" alt="Graph Theory Programming Camp Certificate" loading="lazy">
+      <div class="cert-thumb-label">Graph Theory Camp — AlgoUniversity</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-ride.jpg" data-title="Certificate of Appreciation — RIDE, Semi-Finalist, RuTAG IIT Madras">
+      <img src="certs/cert-ride.jpg" alt="RIDE RuTAG IIT Madras Certificate" loading="lazy">
+      <div class="cert-thumb-label">RIDE — RuTAG IIT Madras</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-nptel-cloud.jpg" data-title="NPTEL Online Certification — Cloud Computing, IIT Kharagpur (56%)">
+      <img src="certs/cert-nptel-cloud.jpg" alt="NPTEL Cloud Computing Certificate" loading="lazy">
+      <div class="cert-thumb-label">NPTEL — Cloud Computing</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-nptel-joc.jpg" data-title="NPTEL Online Certification (Elite) — The Joy of Computing using Python, IIT Madras (68%)">
+      <img src="certs/cert-nptel-joc.jpg" alt="NPTEL Joy of Computing Certificate" loading="lazy">
+      <div class="cert-thumb-label">NPTEL Elite — Joy of Computing</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-prodigy.jpg" data-title="Web Development Internship — Prodigy InfoTech (1 month, Aug 2025)">
+      <img src="certs/cert-prodigy.jpg" alt="Prodigy InfoTech Internship Certificate" loading="lazy">
+      <div class="cert-thumb-label">Web Dev Internship — Prodigy InfoTech</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-ieee-xplore.jpg" data-title="Certificate of Participation — IEEE Xplore Webinar, EBSCO Information Services">
+      <img src="certs/cert-ieee-xplore.jpg" alt="IEEE Xplore Webinar Certificate" loading="lazy">
+      <div class="cert-thumb-label">IEEE Xplore Webinar</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-html5.jpg" data-title="HTML5 - The Language — Infosys Springboard">
+      <img src="certs/cert-html5.jpg" alt="HTML5 Certificate Infosys Springboard" loading="lazy">
+      <div class="cert-thumb-label">HTML5 — Infosys Springboard</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-css3.jpg" data-title="CSS3 — Infosys Springboard">
+      <img src="certs/cert-css3.jpg" alt="CSS3 Certificate Infosys Springboard" loading="lazy">
+      <div class="cert-thumb-label">CSS3 — Infosys Springboard</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-javascript.jpg" data-title="JavaScript — Infosys Springboard">
+      <img src="certs/cert-javascript.jpg" alt="JavaScript Certificate Infosys Springboard" loading="lazy">
+      <div class="cert-thumb-label">JavaScript — Infosys Springboard</div>
+    </div>
+    <div class="cert-thumb" data-full="certs/cert-sololearn-c.jpg" data-title="Introduction to C — SoloLearn">
+      <img src="certs/cert-sololearn-c.jpg" alt="Introduction to C Certificate SoloLearn" loading="lazy">
+      <div class="cert-thumb-label">Introduction to C — SoloLearn</div>
+    </div>
+  </div>
+
+  <div class="resume-box glass" data-animate="fade-up">
+    <div class="resume-info">
+      <h3>Resume</h3>
+      <p>A complete overview of my education, skills, and projects — ready to download anytime.</p>
+    </div>
+    <div class="resume-actions">
+      <a href="resume.pdf" class="btn btn-primary magnetic" download><span>Download Resume</span></a>
+      <a href="resume.pdf" class="btn btn-glass magnetic" target="_blank"><span>View Resume</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section contact" id="contact" data-section="contact">
+  <div class="section-head" data-animate="fade-up">
+    <p class="section-tag">06 — Contact</p>
+    <h2 class="section-title">Let's Build Something</h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info glass" data-animate="fade-right">
+      <h3>Gomathi S</h3>
+      <p class="contact-line">📞 +91 9363971048</p>
+      <p class="contact-line">✉️ akshayaswathi192@gmail.com</p>
+      <p class="contact-line">🎓 National Engineering College, Kovilpatti</p>
+      <p class="contact-line">📍 5C, Velukandammankovil Street, Tiruchendur, Tamil Nadu</p>
+      <p class="contact-line">🗣️ Languages: Tamil, English</p>
+
+      <div class="social-links">
+        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-icon" aria-label="GitHub">gh</a>
+        <a href="#" class="social-icon" aria-label="LeetCode">lc</a>
+        <a href="#" class="social-icon" aria-label="HackerRank">hr</a>
+        <a href="#" class="social-icon" aria-label="Email">@</a>
+      </div>
+    </div>
+
+    <form class="contact-form glass" data-animate="fade-left" id="contactForm">
+      <div class="form-group">
+        <input type="text" id="name" name="name" required>
+        <label for="name">Name</label>
+        <span class="form-error" id="nameError"></span>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <span class="form-error" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" required>
+        <label for="subject">Subject</label>
+        <span class="form-error" id="subjectError"></span>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Message</label>
+        <span class="form-error" id="messageError"></span>
+      </div>
+      <button type="submit" class="btn btn-primary magnetic full-width"><span>Send Message</span></button>
+      <div class="form-success" id="formSuccess">✅ Message sent successfully!</div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner" data-animate="fade-up">
+    <div class="footer-logo">GS<span class="dot">.</span></div>
+    <div class="footer-links">
+      <a href="#home" data-target="home">Home</a>
+      <a href="#about" data-target="about">About</a>
+      <a href="#skills" data-target="skills">Skills</a>
+      <a href="#projects" data-target="projects">Projects</a>
+      <a href="#contact" data-target="contact">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="#" class="social-icon small">in</a>
+      <a href="#" class="social-icon small">gh</a>
+      <a href="#" class="social-icon small">lc</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Gomathi S. All rights reserved.</p>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+</footer>
+
+<!-- PAGE TRANSITION OVERLAY -->
+<div class="transition-overlay" id="transitionOverlay">
+  <div class="transition-shape" id="transitionShape"></div>
+</div>
+
+<!-- CERTIFICATE LIGHTBOX -->
+<div class="lightbox-overlay" id="certLightbox">
+  <button class="lightbox-close" id="closeLightbox">✕</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="Certificate full view">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
