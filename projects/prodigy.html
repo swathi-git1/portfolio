@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prodigy — Gomathi S</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../project-page.css">
+</head>
+<body>
+
+<div class="aurora-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<nav class="proj-nav">
+  <a href="../index.html#projects" class="proj-back">← Back to Portfolio</a>
+  <div class="proj-nav-logo">GS<span class="dot">.</span></div>
+</nav>
+
+<main class="proj-main">
+
+  <div class="proj-hero" data-animate="fade-up">
+    <div class="proj-glyph-hero">🌐</div>
+    <div class="proj-badge-row">
+      <span class="project-badge">Internship Project</span>
+      <span class="project-badge">Prodigy InfoTech</span>
+    </div>
+    <h1 class="proj-title">Prodigy</h1>
+    <p class="proj-subtitle">A web project built with HTML during a 1-month Web Development internship at Prodigy InfoTech, exploring frontend fundamentals and UI structuring through hands-on practice.</p>
+    <div class="proj-meta-row">
+      <span>💻 <strong>HTML, CSS</strong></span>
+      <span>📅 <strong>Aug 1 – Aug 31, 2025</strong></span>
+    </div>
+    <div class="proj-cta-row">
+      <a href="https://github.com/swathi-git1/Prodigy" target="_blank" class="btn btn-primary magnetic"><span>View on GitHub</span></a>
+      <a href="../index.html#coding" class="btn btn-glass magnetic"><span>View Certificate</span></a>
+    </div>
+  </div>
+
+  <div class="proj-section" data-animate="fade-up">
+    <h2 class="proj-section-title"><span class="num">01</span> Overview</h2>
+    <p class="proj-body-text">During a 1-month Web Development internship at Prodigy InfoTech, this project served as hands-on practice with core frontend fundamentals — semantic HTML structuring, layout composition, and styling — completed with outstanding remarks.</p>
+  </div>
+
+  <div class="proj-section" data-animate="fade-up">
+    <h2 class="proj-section-title"><span class="num">02</span> What It Covers</h2>
+    <ul class="proj-list">
+      <li>Semantic HTML structuring for clean, accessible markup</li>
+      <li>CSS layout fundamentals — spacing, alignment, and responsive basics</li>
+      <li>Practical, task-based learning under real internship deliverables and deadlines</li>
+    </ul>
+  </div>
+
+  <div class="proj-nav-links" data-animate="fade-up">
+    <a href="spotify-trends.html" class="proj-nav-link"><span class="label">← Previous Project</span><span class="name">Spotify Trends Dashboard</span></a>
+    <a href="agentic-ai.html" class="proj-nav-link next"><span class="label">Next Project →</span><span class="name">Agentic AI & Frameworks</span></a>
+  </div>
+
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('in-view'); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1 });
+      obs.observe(el);
+    });
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    let mx=0, my=0, gx=0, gy=0;
+    window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function loop() {
+      gx += (mx-gx)*0.12; gy += (my-gy)*0.12;
+      glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    }
+    loop();
+  });
+</script>
+</body>
+</html>

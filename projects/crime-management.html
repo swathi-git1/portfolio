@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crime Management System — Gomathi S</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../project-page.css">
+</head>
+<body>
+
+<div class="aurora-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<nav class="proj-nav">
+  <a href="../index.html#projects" class="proj-back">← Back to Portfolio</a>
+  <div class="proj-nav-logo">GS<span class="dot">.</span></div>
+</nav>
+
+<main class="proj-main">
+
+  <div class="proj-hero" data-animate="fade-up">
+    <div class="proj-glyph-hero">🚔</div>
+    <div class="proj-badge-row">
+      <span class="project-badge">Java · OOP</span>
+      <span class="project-badge">Database-Backed</span>
+    </div>
+    <h1 class="proj-title">Crime Management System</h1>
+    <p class="proj-subtitle">A Java-based system to record, track, and manage crime reports, case statuses, and officer assignments with a structured database backend.</p>
+    <div class="proj-meta-row">
+      <span>💻 <strong>Java</strong></span>
+      <span>🗄️ <strong>Database-driven</strong></span>
+    </div>
+    <div class="proj-cta-row">
+      <a href="https://github.com/swathi-git1/Crime-Management-System" target="_blank" class="btn btn-primary magnetic"><span>View on GitHub</span></a>
+      <a href="https://github.com/swathi-git1/Crime-Management-System-1" target="_blank" class="btn btn-glass magnetic"><span>Alt Version</span></a>
+    </div>
+  </div>
+
+  <div class="proj-section" data-animate="fade-up">
+    <h2 class="proj-section-title"><span class="num">01</span> Overview</h2>
+    <p class="proj-body-text">The Crime Management System digitizes the process of logging and tracking criminal cases — replacing manual paper records with a structured, queryable system. It models the real-world entities involved in case handling: crime reports, case statuses, and officer assignments, each represented as classes with clear responsibilities.</p>
+  </div>
+
+  <div class="proj-section" data-animate="fade-up">
+    <h2 class="proj-section-title"><span class="num">02</span> Core Features</h2>
+    <ul class="proj-list">
+      <li>Record new crime reports with structured fields (date, location, type, description)</li>
+      <li>Track case status through its lifecycle (Open, Under Investigation, Closed)</li>
+      <li>Assign and reassign officers to active cases</li>
+      <li>Persist records in a database for reliable retrieval and reporting</li>
+    </ul>
+  </div>
+
+  <div class="proj-section" data-animate="fade-up">
+    <h2 class="proj-section-title"><span class="num">03</span> Why OOP Fits This Problem</h2>
+    <div class="concept-grid">
+      <div class="concept-card glass">
+        <h4>🔒 Encapsulation</h4>
+        <p>Each case, officer, and report is encapsulated as an object — keeping sensitive fields like case status changes controlled through defined methods rather than open access.</p>
+      </div>
+      <div class="concept-card glass">
+        <h4>🗄️ Database Integration</h4>
+        <p>Java's structured classes map cleanly onto database tables, making it straightforward to persist and query crime records reliably across sessions.</p>
+      </div>
+      <div class="concept-card glass">
+        <h4>🌳 Extensibility</h4>
+        <p>New case types or officer roles can be added by extending existing classes, without restructuring the whole system — a direct benefit of an object-oriented design.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-nav-links" data-animate="fade-up">
+    <a href="smart-home.html" class="proj-nav-link"><span class="label">← Previous Project</span><span class="name">Smart Home Management System</span></a>
+    <a href="spotify-trends.html" class="proj-nav-link next"><span class="label">Next Project →</span><span class="name">Spotify Trends Dashboard</span></a>
+  </div>
+
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('in-view'); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1 });
+      obs.observe(el);
+    });
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    let mx=0, my=0, gx=0, gy=0;
+    window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function loop() {
+      gx += (mx-gx)*0.12; gy += (my-gy)*0.12;
+      glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    }
+    loop();
+  });
+</script>
+</body>
+</html>

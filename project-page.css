@@ -1,0 +1,112 @@
+/* ============================================
+   PROJECT DETAIL PAGE STYLES
+   (extends style.css theme variables)
+============================================ */
+
+.proj-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem clamp(1.5rem, 5vw, 4rem);
+  background: rgba(5,6,15,0.7); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+}
+.proj-back {
+  display: inline-flex; align-items: center; gap: 0.5rem; color: var(--soft-white);
+  text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: color 0.3s ease, transform 0.3s ease;
+}
+.proj-back:hover { color: var(--cyan); transform: translateX(-4px); }
+.proj-nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; }
+.proj-nav-logo .dot { color: var(--cyan); }
+
+.proj-main { position: relative; z-index: 1; max-width: 980px; margin: 0 auto; padding: 7.5rem clamp(1.4rem, 5vw, 2rem) 5rem; }
+
+/* Hero */
+.proj-hero { margin-bottom: 3rem; }
+.proj-badge-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
+.proj-glyph-hero {
+  width: 90px; height: 90px; border-radius: 22px; display: flex; align-items: center; justify-content: center;
+  font-size: 2.6rem; background: var(--gradient-1); margin-bottom: 1.6rem;
+  box-shadow: 0 12px 40px rgba(59,130,246,0.3);
+}
+.proj-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.8rem; line-height: 1.1; }
+.proj-subtitle { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin-bottom: 1.6rem; }
+.proj-meta-row { display: flex; gap: 1.6rem; flex-wrap: wrap; color: var(--muted); font-size: 0.88rem; margin-bottom: 1.8rem; }
+.proj-meta-row span strong { color: var(--soft-white); }
+.proj-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Section blocks */
+.proj-section { margin-bottom: 3rem; }
+.proj-section-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.5rem;
+  margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem;
+}
+.proj-section-title .num { font-family: var(--font-mono); color: var(--cyan); font-size: 0.95rem; }
+.proj-body-text { color: var(--muted); font-size: 0.98rem; max-width: 760px; }
+.proj-body-text + .proj-body-text { margin-top: 0.9rem; }
+.proj-body-text strong { color: var(--soft-white); }
+.proj-body-text code {
+  font-family: var(--font-mono); background: rgba(255,255,255,0.06); padding: 0.15rem 0.45rem;
+  border-radius: 6px; font-size: 0.85em; color: var(--cyan);
+}
+
+/* Concept cards (OOP pillars etc) */
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+.concept-card { padding: 1.6rem; transition: transform 0.4s var(--ease-out), border-color 0.4s ease; }
+.concept-card:hover { transform: translateY(-5px); border-color: var(--electric-blue); }
+.concept-card h4 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+.concept-card p { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.8rem; }
+
+/* Code block */
+.code-block {
+  background: #0a0c18; border: 1px solid var(--glass-border); border-radius: 12px;
+  padding: 1rem 1.2rem; overflow-x: auto; font-family: var(--font-mono); font-size: 0.82rem;
+  color: #c9e8ff; line-height: 1.6; white-space: pre;
+}
+.code-block .kw { color: var(--neon-purple); }
+.code-block .str { color: #86efac; }
+.code-block .com { color: var(--muted); }
+
+/* Problem list */
+.proj-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.6rem; }
+.proj-list li { color: var(--muted); font-size: 0.94rem; padding-left: 1.4rem; position: relative; }
+.proj-list li::before {
+  content: ''; position: absolute; left: 0; top: 0.5em; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--cyan); box-shadow: 0 0 8px var(--cyan);
+}
+
+/* Diagram image frame */
+.diagram-frame { border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); background: #fff; }
+.diagram-frame img { width: 100%; display: block; }
+.diagram-caption { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 0.8rem; }
+
+/* Team grid */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.team-card { padding: 1.2rem; text-align: center; }
+.team-card .avatar {
+  width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 0.7rem;
+  background: var(--gradient-2); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; color: var(--navy);
+}
+.team-card h5 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.2rem; }
+.team-card span { font-size: 0.78rem; color: var(--muted); }
+
+/* Tech stack pills (reuse tech-tags from main style but local fallback) */
+.proj-tech-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+/* Nav buttons between projects (prev/next) */
+.proj-nav-links { display: flex; justify-content: space-between; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); }
+.proj-nav-link {
+  display: flex; flex-direction: column; gap: 0.3rem; text-decoration: none; color: var(--soft-white);
+  padding: 1rem 1.4rem; border-radius: 14px; border: 1px solid var(--glass-border); transition: all 0.3s ease;
+  max-width: 48%;
+}
+.proj-nav-link:hover { border-color: var(--cyan); transform: translateY(-3px); }
+.proj-nav-link .label { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.proj-nav-link .name { font-weight: 600; font-size: 0.92rem; }
+.proj-nav-link.next { text-align: right; align-items: flex-end; margin-left: auto; }
+
+@media (max-width: 700px) {
+  .proj-nav-links { flex-direction: column; }
+  .proj-nav-link { max-width: 100%; }
+  .proj-nav-link.next { align-items: flex-start; text-align: left; }
+}
